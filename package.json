@@ -3,18 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engine":{
-    "node":"8.1.1",
-    "npm":"5.0.3"
+  "engine": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
   },
   "scripts": {
-    "start":"node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.4",
-    "mongoose": "^5.3.9"
+    "mongoose": "^5.3.9",
+    "mongoose-unique-validator": "^2.0.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "validator": "^10.9.0"
   }
 }
