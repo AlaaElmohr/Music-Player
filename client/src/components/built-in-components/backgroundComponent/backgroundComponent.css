@@ -1,8 +1,0 @@
- 
-.background-image{
-    background: url('../../../assets/images/signIn.jpg');
-
-}
-.overlay{
-    background: linear-gradient(90deg, rgba(139, 145, 221, 0.7) 0%, rgba(16, 25, 93, 0.7) 71%, rgba(16, 25, 93, 0.7) 100%)
-}

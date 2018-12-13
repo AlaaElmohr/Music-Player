@@ -1,0 +1,15 @@
+@import '../assets/variables/base.scss';
+.flex{
+    height: 100%;
+    .sidebar{
+        width:3%;
+        background: $sidebar;
+        height: 100%;
+      }
+      .content{
+        width:97%;
+        background: $darkBackground;
+        height: 100%;
+      
+      }
+}

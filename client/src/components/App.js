@@ -2,21 +2,35 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import LoginComponent from './auth/login/Login';
+import SignUpComponent from './auth/signup/SignUp';
+import HomeComponent from './Home/Home';
+import HeaderComponent from './Header/Header';
+import SideBarComponent from './SideBar/SideBar';
 
-import LoginComponent from './login/Login';
+import './App.scss';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-  }
-
   render() {
+
     return (
-      <div className="container">
+
+      <div className="fullscreen root">
         <BrowserRouter>
-          <div>
-            <Route exact path="/login" component={LoginComponent} />
+          <div className="fullscreen">
+            <div className="flex">
+             <div className="sidebar">
+               <SideBarComponent />
+             </div>
+             <div className="content">
+               <HeaderComponent />
+               <Route exact path='/home' component={HomeComponent} />
+             </div>
+            </div>
+            <Route exact path='/login' component={LoginComponent} />
+            <Route exact path='/signup' component={SignUpComponent} />
            
+
           </div>
         </BrowserRouter>
       </div>

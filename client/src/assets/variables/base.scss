@@ -1,0 +1,58 @@
+@import './colors';
+@import './fonts';
+@include font-face('Maison-Neue-Light', '../fonts/Maison-Neue-Light.otf');
+@include font-face('Maison-Neue-Bold', '../fonts/Maison-Neue-Bold.otf');
+.dark-bg{
+    background:$darkBackground;
+}
+.row{
+    margin: 0;
+}
+
+.fullscreen{
+    height: 100%;
+}
+.btn{
+    color:$white;
+    text-transform: uppercase;
+    font-size: 13px
+}
+.btn-success{
+  background-color: $pink;
+  border-color: $pink;
+ 
+}
+.btn-primary{
+    background-color: $facebook;
+    border-color: $facebook;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+.root{
+    font-family: 'Montserrat', sans-serif;
+}
+.m-l-10{
+    margin-left: 10px
+}
+.m-r-30{
+    margin-right: 20px
+}
+.m-t-30{
+    margin-top: 30px
+}
+.m-t-10{
+    margin-top: 10px
+}
+.m-t-5{
+    margin-top: 5px
+}
+.has-danger{
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #721c24;
+    border-color: #721c24;
+    
+}

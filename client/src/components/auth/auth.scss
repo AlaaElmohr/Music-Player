@@ -1,0 +1,22 @@
+@import '../../assets/variables/base.scss';
+.right-side{
+    padding:100px 50px;
+}
+.login-form{
+    margin-top: 150px;
+}
+.left-side{
+    padding: 0;
+}
+.login-footer{
+    position: absolute;
+    bottom: 150px;
+    h6{
+        color:$span;
+        .link{
+            margin-left: 5px;
+            color:$pink;
+            text-decoration:underline
+        }
+    }
+}

@@ -1,27 +1,13 @@
 import axios from 'axios';
-import { FETCH_USER, FETCH_SURVEYS } from './types';
+import { LOGIN_GOOGLE, LOGIN_EMAIL,SIGNUP_EMAIL} from './types';
 
-export const fetchUser = () => async dispatch => {
-  const res = await axios.get('/api/current_user');
-
-  dispatch({ type: FETCH_USER, payload: res.data });
+export const signupWithEmail = user => async dispatch => {
+  const res = await axios.post('/api/auth/signup', user);
+  console.log("res"+res);
+  dispatch({ type: SIGNUP_EMAIL, payload: res.data});
 };
-
-export const handleToken = token => async dispatch => {
-  const res = await axios.post('/api/stripe', token);
-
-  dispatch({ type: FETCH_USER, payload: res.data });
-};
-
-export const submitSurvey = (values, history) => async dispatch => {
-  const res = await axios.post('/api/surveys', values);
-
-  history.push('/surveys');
-  dispatch({ type: FETCH_USER, payload: res.data });
-};
-
-export const fetchSurveys = () => async dispatch => {
-  const res = await axios.get('/api/surveys');
-
-  dispatch({ type: FETCH_SURVEYS, payload: res.data });
+export const loginWithEmail = user => async dispatch => {
+  const res = await axios.post('/api/auth/login', user);
+  console.log("res"+res);
+  dispatch({ type: LOGIN_EMAIL, payload: res.data});
 };

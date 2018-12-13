@@ -1,0 +1,42 @@
+@import '../../assets/variables/base.scss';
+.header{
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    overflow: hidden;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 60px;
+        background: inherit; 
+        position: absolute;
+        left: -25px;
+        left: position;
+        right: 0;
+        top: -25px;  
+        top: position ;
+        bottom: 0;
+        filter: blur(10px);
+        box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+    
+    }
+    .item-list{
+        width:80%;
+        display: flex;
+        justify-content: space-around;
+        .item{
+        color:$white;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        padding: 20px;
+        }
+        .active{
+            border-bottom: 3px solid $pink
+        }
+    }
+}

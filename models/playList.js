@@ -9,9 +9,9 @@ const schema = new Schema({
     type: String,
     required: true,
   },
-  songs:[{type: Schema.Types.ObjectId, ref: 'Song'}]
+  songs:[SongSchema]
 });
 
 schema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model('playList', schema);
+module.exports = schema;

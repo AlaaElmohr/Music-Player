@@ -5,10 +5,10 @@ const mongooseUniqueValidator = require('mongoose-unique-validator');
 const SongSchema = require('./Song');
 
 const schema = new Schema({
-  songs:[{type: Schema.Types.ObjectId, ref: 'Song'}]
+  songs:[SongSchema]
 
 });
 
 schema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model('Favourites', schema);
+module.exports = schema;

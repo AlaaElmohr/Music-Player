@@ -8,23 +8,23 @@ const FollowingSchema = require('./Following');
 
 const schema = new Schema({
   googleId:{
-    type: String,
-    required: true,
-  },
+    type: String
+    },
   image:{
-    type: String,
+    type: String
   },
   email: {
-    type: String,
-    required: true,
+    type: String
   },
   name:{
-    type:String,
-    require:true,
+    type:String
   },
-  following:[{type: Schema.Types.ObjectId, ref: 'Following'}],
-  playlists:[{type: Schema.Types.ObjectId, ref: 'playList'}],
-  favourites:[{type: Schema.Types.ObjectId, ref: 'Favourites'}]
+  password:{
+    type:String
+  },
+  following:[FollowingSchema],
+  playlists:[playListSchema],
+  favourites:[FavouritesSchema]
 });
 
 schema.plugin(mongooseUniqueValidator);

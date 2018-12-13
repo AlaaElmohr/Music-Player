@@ -1,0 +1,11 @@
+@import '../../../assets/variables/base.scss';
+
+::placeholder{
+    color:$border-form;
+    text-transform: uppercase
+}
+input[type=text]:not(.browser-default) ,input[type=email]:not(.browser-default), input[type=password]:not(.browser-default){
+    border-bottom: 1px solid #1a1d2c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px
+}              

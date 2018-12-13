@@ -11,7 +11,6 @@ const schema = new Schema({
     type: String,
   },
 });
-
 schema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model('Following', schema);
+module.exports = schema;

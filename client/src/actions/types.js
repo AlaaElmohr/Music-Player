@@ -1,2 +1,2 @@
-export const FETCH_USER = 'fetch_user';
-export const FETCH_SURVEYS = 'fetch_surveys';
+export const LOGIN_EMAIL = 'login_email';
+export const SIGNUP_EMAIL = 'signup_email';

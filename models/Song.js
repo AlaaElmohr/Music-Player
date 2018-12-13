@@ -22,4 +22,4 @@ const schema = new Schema({
 
 schema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model('Song', schema);
+module.exports = schema;
