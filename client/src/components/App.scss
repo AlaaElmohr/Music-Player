@@ -1,15 +1,19 @@
 @import '../assets/variables/base.scss';
 .flex{
-    height: 100%;
     .sidebar{
         width:3%;
         background: $sidebar;
         height: 100%;
+        position: fixed;
       }
       .content{
         width:97%;
         background: $darkBackground;
-        height: 100%;
+        height: auto;
+        margin-left: 3%;
+        .routes{
+          padding:0 50px
+        }
       
       }
 }

@@ -1,0 +1,30 @@
+@import '../../../assets/variables/base.scss';
+.music-player{
+    z-index: 9999;
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background: $musicPlayer;
+    display: flex;
+    justify-content: center;
+    .flex{
+        width: 10%;
+        align-items: center;
+        justify-content: space-between !important;
+        i.fa{
+            color:$span
+        }
+        .fa-play-circle{
+            color:$white !important;
+        }
+        .volume{
+            position: absolute;
+            right:20px;
+            .fa-volume-up{
+                color:$white !important;
+            }
+        }
+    }
+  
+}

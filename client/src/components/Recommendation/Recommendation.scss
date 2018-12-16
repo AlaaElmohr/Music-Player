@@ -1,0 +1,22 @@
+@import '../../assets/variables/base.scss';
+
+.profile{
+    height: auto;
+    .background-image{
+        background-position: center 45%;
+        .overlay{
+            background: linear-gradient(180deg, rgba(19, 23, 34,0) 0%, rgba(19, 23, 34,0) 31%, rgba(19, 23, 34,1) 100%),
+            linear-gradient(90deg, rgba(19, 23, 34,1) 0%, rgba(19, 23, 34,0) 31%, rgba(19, 23, 34,1) 100%),
+            linear-gradient(45deg, rgba(19, 23, 34,1) 0%, rgba(19, 23, 34,0) 61%, rgba(19, 23, 34,1) 100%);
+        }
+    }
+    .section{
+       .flex{
+         justify-content: space-between
+       }
+       .card-list{
+           margin-top: 20px;
+       }
+    }
+    
+}

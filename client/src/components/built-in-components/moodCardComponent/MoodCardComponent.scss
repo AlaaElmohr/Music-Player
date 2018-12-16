@@ -1,0 +1,30 @@
+@import '../../../assets/variables/base.scss';
+.mood-card{
+    width: 350px;
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    
+    .overlay{
+        background: linear-gradient(180deg, rgba(19, 23, 34,0) 0%, rgba(19, 23, 34,0.4) 10%, rgba(19, 23, 34,1) 100%);
+        height: 100%;
+            h3{
+                padding: 100px 0px;
+                font-weight: bold;
+                text-align: center;
+        }
+    }
+    
+
+    &:hover{
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.5s ease-in 0s;
+        .overlay{
+            transition: all 0.4s ease-in 0s;
+            display: block;
+            position: absolute;
+            width: 400px;
+            background: linear-gradient(180deg, transparent 0%, rgba(237, 33, 93,0.6) 51%, rgba(237, 33, 93,1) 100%);
+        }
+    }
+}

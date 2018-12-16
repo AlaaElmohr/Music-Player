@@ -2,8 +2,32 @@
 .sidebar{
     .logo{
         background: $white;
-        width:60px;
+        width:55px;
         height: 60px;
         padding: 5px 0px;
+    }
+    .menu-list{
+        margin-top: 20px;
+        .item{
+            height: 60px;
+            width:55px;
+            a{
+            height: 60px;
+            width:55px;
+            padding: 20px;
+        
+            i.fa{
+                color:$pink;
+            }
+            border-bottom: 1px solid $border-form;
+        }
+        }
+
+        .active{
+            background: $pink;
+            i.fa{
+                color:$white !important;
+            }
+        }
     }
 }

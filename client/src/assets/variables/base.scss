@@ -2,15 +2,31 @@
 @import './fonts';
 @include font-face('Maison-Neue-Light', '../fonts/Maison-Neue-Light.otf');
 @include font-face('Maison-Neue-Bold', '../fonts/Maison-Neue-Bold.otf');
+.section{
+    color:$white;
+    padding: 40px;
+    
+}
+.card{
+    border:0
+}
 .dark-bg{
     background:$darkBackground;
 }
 .row{
     margin: 0;
 }
-
+.bold{
+    font-weight: bold
+}
 .fullscreen{
     height: 100%;
+}
+.text-white{
+    color:$white
+}
+.text-gray{
+    color:$span !important
 }
 .btn{
     color:$white;
@@ -26,9 +42,13 @@
     background-color: $facebook;
     border-color: $facebook;
 }
+.btn-danger{
+    background-color: #2F3255;
+    border-color: #2F3255;
+    
+}
 .flex{
     display:flex;
-    align-items: center;
 }
 .root{
     font-family: 'Montserrat', sans-serif;

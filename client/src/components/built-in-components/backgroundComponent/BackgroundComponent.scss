@@ -35,6 +35,36 @@
                 }
             }
         }
+        .profile-content{
+            .flex{
+                align-self: center;
+                align-items: center
+            }
+            position: absolute;
+            bottom: 50px;
+            background: transparent;
+            height: auto;
+            img{
+                height: 250px;
+                width: 250px;
+            }
+            .info{
+                margin-left: 50px;
+                h1{
+                    font-weight: bold;
+                    color:$white;
+                }
+                span{
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                p{
+                    width:80%;
+                    margin: 20px 0px;
+                }
+            }
+        }
     }
 
     

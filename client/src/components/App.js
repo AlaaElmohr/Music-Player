@@ -9,6 +9,11 @@ import HeaderComponent from './Header/Header';
 import SideBarComponent from './SideBar/SideBar';
 
 import './App.scss';
+import MusicPlayerComponent from './built-in-components/musicPlayerComponent/MusicPlayerComponent';
+import ProfileComponent from './Profile/Profile';
+import RecommendationComponent from './Recommendation/Recommendation';
+import MoodComponent from './Mood/Mood';
+import PlayListComponent from './PlayList/PlayList';
 
 class App extends Component {
   render() {
@@ -24,8 +29,17 @@ class App extends Component {
              </div>
              <div className="content">
                <HeaderComponent />
-               <Route exact path='/home' component={HomeComponent} />
+               <div className="routes">
+                 <Route exact path='/home' component={HomeComponent} />
+                 <Route exact path='/playlist' component={PlayListComponent} />
+                 <Route exact path='/recommendation' component={RecommendationComponent} />
+                 <Route exact path='/profile' component={ProfileComponent} />
+                 <Route exact path='/mood' component={MoodComponent} />
+
+               </div>
+               
              </div>
+             <MusicPlayerComponent />
             </div>
             <Route exact path='/login' component={LoginComponent} />
             <Route exact path='/signup' component={SignUpComponent} />

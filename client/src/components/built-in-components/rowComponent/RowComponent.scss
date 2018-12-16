@@ -1,0 +1,43 @@
+@import '../../../assets/variables/base.scss';
+.no-padding{
+  td{
+      padding: 0px 10px;
+  }
+}
+.rowTable{
+
+    img{
+        width:60px;
+        height: 60px;
+        margin-left:40px;
+    }
+    td{
+        color:$span;
+        .flex{
+            align-items: center;
+        }
+    }
+    .fa-heart{
+        color: $pink !important;
+        margin-left:40px
+    }
+    i.fa{
+        color:$span
+    }
+    .big{
+        width: 60%;
+    }
+    .flex{
+       justify-content: initial !important;
+    }
+    .info{
+        margin-left: 20px;
+        p{
+          font-weight: bold
+        }
+        span{
+            color:$span
+        }
+    }
+    
+}

@@ -20,7 +20,7 @@ class LoginComponent extends Component{
 
              </div>
              <div className="col-md-9 left-side">
-                <BackgroundComponent title="New FKA Twig Album is now available" span="what's new on NG?" height="100%" image="signIn.jpg"/>
+                <BackgroundComponent title="New FKA Twig Album is now available" span="what's new on NG?" height="100%" image="signIn.jpg" profile="false" />
              </div>
             </div>
         );
