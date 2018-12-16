@@ -14,20 +14,14 @@ const CardComponent = (props) => {
           <div className="overlay">
             <div className="overlay-action">
               <div className="flex">
-                <div className="">
                  <i className="fa fa-heart"></i>
-                </div>
-                <div className="">
-                 <i className="fa fa-play-circle fa-2x"></i>
-                </div>
-                <div className="">
+                 <i className="fa fa-play-circle fa-2x"></i>                
                  <i className="fa fa-ellipsis-h"></i>
-                </div>
               </div>
             </div>
             <div className="overlay-content">
-              <p>{props.title}</p>
-              <span>{props.span}</span>
+              <p>{props.song}</p>
+              <span>{props.singer}</span>
             </div>
           </div>
 

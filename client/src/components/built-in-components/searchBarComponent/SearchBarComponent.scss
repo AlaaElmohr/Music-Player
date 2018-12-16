@@ -1,0 +1,18 @@
+@import '../../../assets/variables/base.scss';
+.search-bar{
+    display: flex;
+    align-items: center;
+        i.fa{
+            color: $border-form;
+            margin-left: -10px;
+        }
+    input[type=text]:not(.browser-default) {
+        height: 20px;
+        margin:10px;
+        border:1px solid $border-form;
+        border-radius: 20px;
+        padding:10px;
+        text-transform: lowercase;
+    }
+   
+}

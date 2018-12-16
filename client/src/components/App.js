@@ -14,6 +14,7 @@ import ProfileComponent from './Profile/Profile';
 import RecommendationComponent from './Recommendation/Recommendation';
 import MoodComponent from './Mood/Mood';
 import PlayListComponent from './PlayList/PlayList';
+import SearchComponent from './Search/Search';
 
 class App extends Component {
   render() {
@@ -35,7 +36,7 @@ class App extends Component {
                  <Route exact path='/recommendation' component={RecommendationComponent} />
                  <Route exact path='/profile' component={ProfileComponent} />
                  <Route exact path='/mood' component={MoodComponent} />
-
+                 <Route exact path='/search' component={SearchComponent} />
                </div>
                
              </div>

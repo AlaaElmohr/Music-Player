@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { NavLink } from 'react-router-dom'
 
 import './Header.scss';
+import SearchBarComponent from '../built-in-components/searchBarComponent/SearchBarComponent';
 
 class HeaderComponent extends Component{
   constructor(){
@@ -35,6 +36,7 @@ class HeaderComponent extends Component{
           <NavLink  to="/recommendation" className="item" activeClassName="active">recommended</NavLink >
           <NavLink  to="/playlist" className="item" activeClassName="active">playlists</NavLink >
           <NavLink  to="/mood" className="item" activeClassName="active">mood</NavLink >
+          <SearchBarComponent />
         </div>
        </div>
        

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Slider, Direction,PlayerIcon } from 'react-player-controls'
 
 import './MusicPlayerComponent.scss';
 const MusicPlayerComponent = (props) => {
