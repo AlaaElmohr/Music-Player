@@ -1,0 +1,55 @@
+@import '../../../assets/variables/base.scss';
+
+.modal{
+    .flex{
+       align-items: center;
+    }
+    .modal-section{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        p{
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            width: 60%;
+            font-size: 16px;
+            line-height: 2em;
+        }
+        
+    }
+    .b-b{
+        border-bottom: 1px solid $border-form;
+    }
+    ::placeholder{
+        text-transform: initial;
+        font-weight: 400;
+        padding-left: 20px;
+    }
+    input[type=text]:not(.browser-default){
+     background: #fff;
+     border-radius: 10px;
+    }
+    .m-t-50{
+        margin-top: 30px !important;
+    }
+    .add{
+        background: #2F3255;
+        border-radius: 10px;
+        width:50px;
+        height: 50px;
+        margin-top: -20px;
+        cursor: pointer;
+        margin-left: 20px;
+        display: flex;
+
+        padding: 0 19px;
+        align-items: center;
+    }
+    i.fa{
+        color:$pink;
+        margin-right: 10px;
+    }
+    h6{
+        color:$white;
+        font-family: 'Montserrat', sans-serif;
+    }
+}

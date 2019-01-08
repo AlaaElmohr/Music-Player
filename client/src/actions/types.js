@@ -1,2 +1,23 @@
 export const LOGIN_EMAIL = 'login_email';
+export const LOGIN_GOOGLE = 'login_google';
+
 export const SIGNUP_EMAIL = 'signup_email';
+export const SEARCH = 'search';
+export const GET_PROFILE = 'get_profile';
+export const FOLLOW_ARTIST='follow_artist';
+export const UNFOLLOW_ARTIST='unfollow_artist';
+export const IS_FOLLOW='is_follow';
+export const LOGOUT='logout';
+export const NEW_PLAYLIST='new_playlist';
+export const GET_PLAYLISTS='get_playlists';
+export const UPDATE_PLAYLIST='update_playlist';
+export const ADD_FAVOURITE='add_favourite';
+export const GET_FAVOURITES='get_favourites';
+export const DELETE_FAVOURITE='delete_favourite';
+export const GET_TRACKS='get_tracks';
+export const GET_ALBUM_TRACKS='get_album_tracks';
+export const GET_NEW_RELEASE='get_new_release';
+export const GET_ARTIST_LIKE='get_artist-like';
+export const GET_LYRIC='get_lyric';
+export const GET_RECOMMENDATION='get_recommendation';
+export const PLAY_AUDIO='play_audio';

@@ -1,5 +1,6 @@
  @import '../../../assets/variables/base.scss';
-
+.background-component{
+    height: 100%;
  .background-image{
 
     background-repeat: no-repeat;
@@ -37,8 +38,7 @@
         }
         .profile-content{
             .flex{
-                align-self: center;
-                align-items: center
+                align-items: center;
             }
             position: absolute;
             bottom: 50px;
@@ -68,4 +68,5 @@
     }
 
     
+}
 }

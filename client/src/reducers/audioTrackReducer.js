@@ -1,9 +1,9 @@
-import { FETCH_SURVEYS } from '../actions/types';
+import { PLAY_AUDIO } from '../actions/types';
 
 export default function(state = [], action) {
   switch (action.type) {
-    case FETCH_SURVEYS:
-      return action.payload;
+    case PLAY_AUDIO:
+      return action.payload || false;
     default:
       return state;
   }

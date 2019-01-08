@@ -5,29 +5,40 @@
   }
 }
 .rowTable{
-
+    .btn-group{
+        span{
+            color:$span;
+        }
+    }
+    .btn{
+        background: transparent !important;
+        box-shadow: none;
+       
+    }
     img{
         width:60px;
         height: 60px;
-        margin-left:40px;
     }
     td{
+        vertical-align: middle !important;
         color:$span;
         .flex{
             align-items: center;
         }
     }
-    .fa-heart{
+    .fa-heart, .fa-heart-o{
         color: $pink !important;
-        margin-left:40px
+        margin-left:20px;
+        cursor: pointer;
     }
     i.fa{
         color:$span
     }
     .big{
-        width: 60%;
+        width: 30%;
     }
     .flex{
+       display: flex;
        justify-content: initial !important;
     }
     .info{

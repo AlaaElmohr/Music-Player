@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Field, reduxForm } from "redux-form";
+import { withRouter } from 'react-router-dom';
+
 import { connect } from "react-redux";
 import { signupWithEmail,loginWithEmail } from "../../../actions";
 import './FormComponent.scss';
@@ -32,14 +34,13 @@ class FormComponent extends Component {
     }
     onSubmit=(values)=>{
         if(this.props.type == 'signup'){
-            this.props.signupWithEmail(values, () => {
-                this.props.history.push("/home");
-              }); 
+          console.log("eeeeeeeeeeeeeeeeeeeeeeh")
+            this.props.signupWithEmail(values,this.props.history)
         }
         if(this.props.type == 'login'){
-            this.props.loginWithEmail(values, () => {
-                this.props.history.push("/home");
-              }); 
+          console.log("oooooooooh")
+
+            this.props.loginWithEmail(values,this.props.history) 
         }
        
     }
@@ -62,8 +63,8 @@ class FormComponent extends Component {
                 type="password"
                 placeholder="enter your password"
                 component={this.renderField}
-              />          
-             <button  type="submit" className="btn btn-success btn-block m-t-10">{this.props.type}</button>
+              /> 
+                <button  type="submit" className="btn btn-success btn-block m-t-10">{this.props.type}</button>
             </form>
             <a href="/auth/google"><button  className="btn btn-primary btn-block m-t-5">log in with google</button></a>
 
@@ -91,4 +92,4 @@ function validate(values) {
 export default reduxForm({
     form: "SignUpForm",
     validate
-  })(connect(null,mapDispatchToProps)(FormComponent));
+  })(connect(null,mapDispatchToProps)(withRouter(FormComponent)));

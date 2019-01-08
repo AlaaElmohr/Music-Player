@@ -24,7 +24,7 @@ const schema = new Schema({
   },
   following:[FollowingSchema],
   playlists:[playListSchema],
-  favourites:[FavouritesSchema]
+  favourites:FavouritesSchema
 });
 
 schema.plugin(mongooseUniqueValidator);

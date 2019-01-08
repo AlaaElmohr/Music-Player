@@ -3,13 +3,10 @@ const Schema = mongoose.Schema;
 const validator=require('validator');
 const mongooseUniqueValidator = require('mongoose-unique-validator');
 const schema = new Schema({
-  name: {
+  idSpotify: {
     type: String,
     required: true,
-  },
-  image:{
-    type: String,
-  },
+  }
 });
 schema.plugin(mongooseUniqueValidator);
 

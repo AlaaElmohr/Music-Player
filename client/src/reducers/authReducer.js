@@ -1,4 +1,4 @@
-import { SIGNUP_EMAIL,LOGIN_EMAIL,LOGIN_GOOGLE } from '../actions/types';
+import { SIGNUP_EMAIL,LOGIN_EMAIL } from '../actions/types';
 
 export default function(state = null, action) {
   switch (action.type) {

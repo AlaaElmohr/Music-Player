@@ -1,6 +1,7 @@
 const passport = require('passport');
 const bcrypt = require('bcryptjs');
-
+const jwt = require('jsonwebtoken');
+const url = require('url');
 const User=require('../models/User');
 
 module.exports = app => {
@@ -14,7 +15,13 @@ module.exports = app => {
         name,
         password: bcrypt.hashSync(password, 10),
       }).save();
-      res.status(200).send(newUser);
+      const token = jwt.sign({user: newUser}, 'secret', {expiresIn: 7200});
+      res.status(200).json({
+        message: 'Successfull logged in',
+        user:newUser.name,
+        token: token,
+        userId: newUser._id
+    });
      }
    } catch(err){
      res.status(400).send(err);
@@ -29,7 +36,13 @@ module.exports = app => {
       if (!bcrypt.compareSync(req.body.password, user.password)) {
         res.status(500).send('error in password');
       }
-      res.status(200).send(user);
+      const token = jwt.sign({user: user}, 'secret', {expiresIn: 7200});
+      res.status(200).json({
+        message: 'Successfull logged in',
+        user:user.name,
+        token: token,
+        userId: user._id
+    });
     } catch(err){
       res.status(400).send(err);
     }
@@ -41,19 +54,30 @@ module.exports = app => {
     })
   );
 
+
   app.get(
-    '/auth/google/callback',
-    passport.authenticate('google'),
-    (req, res) => {
-      res.send('heheh');
+    "/auth/google/callback",
+    passport.authenticate("google", { failureRedirect: "/", session: false }),
+    function(req, res) {
+      const token = jwt.sign({user: req.user}, 'secret', {expiresIn: 7200});
+      const result={
+        message: 'Successfull logged in',
+        user:req.user.name,
+        token: token,
+        userId: req.user._id
+      };
+
+      res.redirect(url.format({
+        pathname:"http://localhost:3000",
+        query: {
+           "token": token 
+        },
+      }));
+      
     }
-  );
+);
   app.get('/api/logout', (req, res) => {
     req.logout();
     res.redirect('/');
-  });
-
-  app.get('/api/current_user', (req, res) => {
-    res.send(req.user);
   });
 };

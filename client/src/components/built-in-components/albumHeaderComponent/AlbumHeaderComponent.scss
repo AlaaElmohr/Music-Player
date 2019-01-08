@@ -8,8 +8,14 @@
         height:150px;
     }
    .content{
+       background: transparent !important;
        margin-left: 30px;
-       h3{
+       p{
+           color:#fff;
+           font-family: 'Montserrat', sans-serif;
+
+       }
+       h5{
            font-weight: bold;
        }
    }

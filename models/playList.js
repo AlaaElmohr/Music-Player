@@ -9,6 +9,9 @@ const schema = new Schema({
     type: String,
     required: true,
   },
+  imageUrl:{
+    type: String,
+  },
   songs:[SongSchema]
 });
 

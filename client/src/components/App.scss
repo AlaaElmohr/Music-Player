@@ -1,4 +1,5 @@
 @import '../assets/variables/base.scss';
+
 .flex{
     .sidebar{
         width:3%;
@@ -11,9 +12,7 @@
         background: $darkBackground;
         height: auto;
         margin-left: 3%;
-        .routes{
-          padding:0 50px
-        }
+        
       
       }
 }

@@ -12,7 +12,6 @@ class HeaderComponent extends Component{
     
   }
   handleScroll= ()=>{
-      console.log("haha"+window.pageYOffset);
       if(window.pageYOffset < 60 ){
         this.className="header";
         this.setState({className:this.className});
@@ -21,9 +20,6 @@ class HeaderComponent extends Component{
         this.className="header bg";
         this.setState({className:this.className});
       }
-     
-    
-   
   }
   componentDidMount(){
     window.addEventListener('scroll', this.handleScroll);
@@ -32,11 +28,11 @@ class HeaderComponent extends Component{
     return(
       <div className={this.state.className}>
         <div className="item-list">
-          <NavLink  to="/home" className="item" activeClassName="active">home</NavLink >
-          <NavLink  to="/recommendation" className="item" activeClassName="active">recommended</NavLink >
-          <NavLink  to="/playlist" className="item" activeClassName="active">playlists</NavLink >
-          <NavLink  to="/mood" className="item" activeClassName="active">mood</NavLink >
-          <SearchBarComponent />
+          <NavLink  exact to="/" className="item" activeClassName="active">home</NavLink>
+          <NavLink  exact to="/recommendation" className="item" activeClassName="active">recommended</NavLink>
+          <NavLink  exact to="/playlists" className="item" activeClassName="active">playlists</NavLink>
+          
+          <SearchBarComponent location={this.props.location} />
         </div>
        </div>
        

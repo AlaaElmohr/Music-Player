@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "proxy": {
-    "/auth/google": {
-      "target": "http://localhost:5000"
-    },
-    "/api/*": {
-      "target": "http://localhost:5000"
-    }
+    "/api": {
+      "target": "http://localhost:5000",
+      "secure": false,
+      "changeOrigin": true
+      },
+      "/auth/google": {
+        "target": "http://localhost:5000",
+        "secure": false,
+        "changeOrigin": true
+        }
   },
   "dependencies": {
     "autoprefixer": "7.1.1",
@@ -37,21 +41,32 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "lodash": "^4.17.11",
     "materialize-css": "^0.99.0",
+    "mdbreact": "^4.8.5-patch.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
-    "react": "^16.0.0-alpha.13",
+    "query-string": "^6.2.0",
+    "radium": "^0.25.1",
+    "react": "^16.4.0",
+    "react-animations": "^1.0.0",
     "react-audio-player": "^0.11.0",
     "react-bootstrap": "^0.32.4",
+    "react-carousel-slider": "^2.0.13",
     "react-dev-utils": "^3.0.2",
-    "react-dom": "^16.0.0-alpha.13",
+    "react-dom": "^16.4.0",
     "react-error-overlay": "^1.0.9",
     "react-fontawesome": "^1.6.1",
+    "react-leaf-carousel": "^1.2.2",
     "react-player-controls": "^1.0.0-beta.0",
+    "react-radio-buttons": "^1.2.2",
     "react-redux": "^5.0.5",
+    "react-responsive-carousel": "^3.1.45",
     "react-router-dom": "^4.1.1",
+    "react-scroll-horizontal": "^1.6.0",
+    "react-scrollbar": "^0.5.4",
     "react-stripe-checkout": "^2.4.0",
     "redux": "^3.7.1",
     "redux-form": "^7.0.1",
