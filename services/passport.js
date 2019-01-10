@@ -1,6 +1,5 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
 const User = require('../models/User');
@@ -20,7 +19,7 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback',
+      callbackURL: 'https://music-player-app-1.herokuapp.com/auth/google/callback',
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {

@@ -68,7 +68,7 @@ module.exports = app => {
       };
 
       res.redirect(url.format({
-        pathname:"http://localhost:3000",
+        pathname:"https://music-player-app-1.herokuapp.com",
         query: {
            "token": token 
         },
