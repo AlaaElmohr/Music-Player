@@ -17,6 +17,9 @@ class HomeComponent extends Component {
      if (token) {
         localStorage.setItem('token',token);
        }
+      else{
+        this.props.history.push('/login')
+      }
     }
   
   }
